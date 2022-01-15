@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dependencies\**" />
+    <EmbeddedResource Remove="Dependencies\**" />
+    <None Remove="Dependencies\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+    <Compile Remove="BoogieProcedureTemplate.cs" />
+    <Compile Include="BoogieProcedureTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoogieProcedureTemplate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  
+  
+  
+  <ItemGroup>
+    <PackageReference Include="FluentCommandLineParser.NETStandard" Version="1.5.0.31-commands" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AsyncPrelude.bpl" />
+    <EmbeddedResource Include="Resources\Prelude.bpl" />
+    <EmbeddedResource Include="Resources\AsyncPreludeGeneric.bpl" />
+    <EmbeddedResource Include="Resources\CommonAsyncPrelude.bpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\analysis-net\Backend\Backend.NET6.csproj" />
+    <ProjectReference Include="..\..\analysis-net\cci\NET6\Microsoft.Cci\Microsoft.Cci.NET6.csproj" />
+  </ItemGroup>
+
+</Project>

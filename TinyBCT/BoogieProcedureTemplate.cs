@@ -65,7 +65,7 @@ namespace TinyBCT
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
-        private global::System.CodeDom.Compiler.CompilerErrorCollection errorsField;
+        //private global::System.CodeDom.Compiler.CompilerErrorCollection errorsField;
         private global::System.Collections.Generic.List<int> indentLengthsField;
         private string currentIndentField = "";
         private bool endsWithNewline;
@@ -90,10 +90,12 @@ namespace TinyBCT
                 this.generationEnvironmentField = value;
             }
         }
+
+        /*
         /// <summary>
         /// The error collection for the generation process
         /// </summary>
-        public System.CodeDom.Compiler.CompilerErrorCollection Errors
+        public System.CodeDom.Compile.CompilerErrorCollection Errors
         {
             get
             {
@@ -104,6 +106,7 @@ namespace TinyBCT
                 return this.errorsField;
             }
         }
+        */
         /// <summary>
         /// A list of the lengths of each indent that was added with PushIndent
         /// </summary>
@@ -212,6 +215,7 @@ namespace TinyBCT
         /// <summary>
         /// Raise an error
         /// </summary>
+        /*
         public void Error(string message)
         {
             System.CodeDom.Compiler.CompilerError error = new global::System.CodeDom.Compiler.CompilerError();
@@ -228,6 +232,7 @@ namespace TinyBCT
             error.IsWarning = true;
             this.Errors.Add(error);
         }
+        */
         /// <summary>
         /// Increase the indent
         /// </summary>

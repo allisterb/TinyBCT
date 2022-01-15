@@ -132,16 +132,16 @@ namespace TinyBCT
             Settings.SetProgramOptions(programOptions);
             var outputPath = SetupOutputFile();
 
-            streamWriter.WriteLine(Resource.GetResourceAsString("TinyBCT.Resources.Prelude.bpl"));
+            streamWriter.WriteLine(Resource.GetResourceAsString("TinyBCT.NET6.Resources.Prelude.bpl"));
 
             if (Settings.AsyncSupport || Settings.AsyncSupportGenerics)
-                streamWriter.WriteLine(Resource.GetResourceAsString("TinyBCT.Resources.CommonAsyncPrelude.bpl"));
+                streamWriter.WriteLine(Resource.GetResourceAsString("TinyBCT.NET6.Resources.CommonAsyncPrelude.bpl"));
 
             if (Settings.AsyncSupport)
-                streamWriter.WriteLine(Resource.GetResourceAsString("TinyBCT.Resources.AsyncPrelude.bpl"));
+                streamWriter.WriteLine(Resource.GetResourceAsString("TinyBCT.NET6.Resources.AsyncPrelude.bpl"));
 
             if (Settings.AsyncSupportGenerics)
-                streamWriter.WriteLine(Resource.GetResourceAsString("TinyBCT.Resources.AsyncPreludeGeneric.bpl"));
+                streamWriter.WriteLine(Resource.GetResourceAsString("TinyBCT.NET6.Resources.AsyncPreludeGeneric.bpl"));
 
             using (var host = new PeReader.DefaultHost())
             {
