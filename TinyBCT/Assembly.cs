@@ -40,12 +40,7 @@ namespace TinyBCT
 
 			if (File.Exists(pdbFileName))
 			{
-				try {
-					using (var pdbStream = File.OpenRead(pdbFileName))
-						this.PdbReader = new PdbReader(pdbStream, this.Host);
-				} catch (Exception e) {
-					Console.WriteLine("WARNING: unable to read PDB file: " + pdbFileName);
-				}
+				this.PdbReader = new PdbReader(fileName, pdbFileName, this.Host, true);
 			}
 
 			this.FileName = fileName;

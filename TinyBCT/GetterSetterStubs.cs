@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.Cci;
 using TinyBCT.Translators;
-using System.Linq;
+
 
 namespace TinyBCT
 {
