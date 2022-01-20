@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TinyBCT.NET6": {
+      "commandName": "Project",
+      "commandLineArgs": "-i C:\\Projects\\Silver\\tests\\TestProjects\\Silver.TestProject1\\bin\\Debug\\net6.0\\Silver.TestProject1.dll"
+    }
+  }
+}
